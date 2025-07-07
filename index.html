@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Loading Payment Gateway</title>
+  <title>Loading - MYZUKII STORE</title>
   <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
-<body class="loading-page">
-  <div class="loading-container">
-    <img src="logo.jpg" alt="MYZUKII LOGO" class="logo-loading">
+<body class="loading">
+  <div class="loader">
+    <img src="logo.jpg" class="logo-loading" alt="MYZUKII Logo">
     <h1>Loading Payment Gateway...</h1>
   </div>
   <audio autoplay loop>
@@ -17,151 +17,3 @@
   </audio>
 </body>
 </html>
-```
-
-**File: home.html**
-```html
-<!DOCTYPE html>
-<html lang="id">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MYZUKII STORE - Payment</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container">
-    <div class="welcome">Selamat datang di MYZUKII STORE</div>
-
-    <div class="card">
-      <h2>GOPAY</h2>
-      <p>083173255250</p>
-      <p class="note">A/N: MUHAMMAD DAVIS</p>
-    </div>
-
-    <div class="card">
-      <h2>DANA</h2>
-      <p>083173255250</p>
-      <p class="note">A/N: MUHAMMAD DAVIS</p>
-      <a href="https://link.dana.id/qr/083173255250" target="_blank">
-        <button>Bayar via DANA</button>
-      </a>
-    </div>
-
-    <div class="card">
-      <h2>QRIS</h2>
-      <p>Silakan scan kode QR di bawah ini:</p>
-      <img src="QRIS-1.png" alt="QRIS" class="qris-img">
-    </div>
-
-    <div class="card">
-      <h3>Order via WhatsApp</h3>
-      <a href="https://wa.me/6283173255250" target="_blank">
-        <button>Chat WhatsApp Sekarang</button>
-      </a>
-    </div>
-
-    <div class="info">
-      Pastikan untuk memverifikasi nomor dan nama penerima sebelum melakukan pembayaran. Jika ada pertanyaan, hubungi MYZUKII STORE langsung. Selamat berbelanja! 🛒✨
-    </div>
-  </div>
-
-  <audio autoplay loop>
-    <source src="dj.mp3" type="audio/mpeg">
-  </audio>
-</body>
-</html>
-```
-
-**File: style.css**
-```css
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: url('background.jpg') no-repeat center center fixed;
-  background-size: cover;
-  color: #fff;
-}
-
-.container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  text-align: center;
-}
-
-.card {
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  padding: 20px;
-  margin: 20px 0;
-  border-radius: 15px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-}
-
-button {
-  padding: 10px 20px;
-  background-color: #00e0ff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  color: black;
-  font-weight: bold;
-}
-
-button:hover {
-  background-color: #00b0cc;
-}
-
-.qris-img {
-  width: 100%;
-  max-width: 300px;
-  border-radius: 10px;
-  margin-top: 10px;
-}
-
-.note {
-  font-size: 0.9rem;
-  color: #ddd;
-}
-
-.info {
-  font-size: 0.9rem;
-  margin-top: 30px;
-  background-color: rgba(0,0,0,0.5);
-  padding: 15px;
-  border-radius: 10px;
-}
-
-/* Loading Page */
-.loading-page {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background: black;
-  flex-direction: column;
-}
-
-.loading-container {
-  text-align: center;
-}
-
-.logo-loading {
-  max-width: 200px;
-  margin-bottom: 20px;
-}
-
-.welcome {
-  font-size: 1.2rem;
-  color: #ffd700;
-  margin-bottom: 20px;
-}
-```
-
-**File: script.js**
-```javascript
-setTimeout(() => {
-  window.location.href = "home.html";
-}, 3000);
