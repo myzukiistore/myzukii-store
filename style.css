@@ -2,8 +2,10 @@ body {
   margin: 0;
   padding: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(#111, #222);
   color: #fff;
+  background: linear-gradient(rgba(10, 10, 20, 0.95), rgba(20, 20, 40, 0.95)),
+              url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
 }
 
 .loading-screen {
@@ -53,6 +55,12 @@ header h2 {
   padding: 20px;
   box-shadow: 0 0 30px rgba(0, 255, 255, 0.2);
   backdrop-filter: blur(12px);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 50px rgba(0, 255, 255, 0.3);
 }
 
 .card h3 {
