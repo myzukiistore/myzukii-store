@@ -1,144 +1,169 @@
+**File: index.html**
+```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MYZUKII STORE - Pembayaran</title>
-  <style>
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(-20px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: url('background.jpg') no-repeat center center fixed;
-      background-size: cover;
-      color: #ffffff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-    }
-
-    .welcome {
-      animation: fadeIn 1.5s ease-in-out;
-      font-size: 1.3rem;
-      margin-bottom: 10px;
-      color: #ffdd00;
-    }
-
-    header {
-      text-align: center;
-    }
-
-    header img {
-      max-width: 300px;
-      height: auto;
-      border-radius: 20px;
-      box-shadow: 0 0 10px #0ff;
-    }
-
-    h1 {
-      margin: 10px 0 20px;
-      font-size: 2rem;
-      color: #00e0ff;
-    }
-
-    .card {
-      background: rgba(30, 30, 30, 0.85);
-      border-radius: 12px;
-      padding: 20px;
-      margin: 15px 0;
-      width: 100%;
-      max-width: 400px;
-      text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.5);
-      animation: fadeIn 1s ease forwards;
-    }
-
-    .card h2 {
-      color: #00e0ff;
-      margin-bottom: 10px;
-    }
-
-    .card p {
-      font-size: 1.2rem;
-      margin: 10px 0;
-    }
-
-    .note {
-      font-size: 0.9rem;
-      color: #aaaaaa;
-    }
-
-    button.copy-btn, a.dana-btn button {
-      background-color: #00e0ff;
-      color: #000;
-      padding: 8px 16px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      margin-top: 10px;
-    }
-
-    button.copy-btn:hover, a.dana-btn button:hover {
-      background-color: #00b0cc;
-    }
-
-    .qris-img {
-      margin-top: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px #00e0ff;
-      max-width: 100%;
-      animation: fadeIn 1.5s ease-in;
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading Payment Gateway</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-<body>
+<body class="loading-page">
+  <div class="loading-container">
+    <img src="logo.jpg" alt="MYZUKII LOGO" class="logo-loading">
+    <h1>Loading Payment Gateway...</h1>
+  </div>
   <audio autoplay loop>
     <source src="dj.mp3" type="audio/mpeg">
-    Your browser does not support the audio element.
   </audio>
-
-  <div class="welcome">Selamat datang di MYZUKII STORE</div>
-
-  <header>
-    <img src="logo.jpg" alt="MYZUKII Logo">
-    <h1>MYZUKII STORE</h1>
-  </header>
-
-  <div class="card">
-    <h2>GOPAY</h2>
-    <p id="gopay">083173255250</p>
-    <div class="note">A/N: MUHAMMAD DAVIS</div>
-    <button class="copy-btn" onclick="copyToClipboard('gopay')">Salin Nomor</button>
-  </div>
-
-  <div class="card">
-    <h2>DANA</h2>
-    <p id="dana">083173255250</p>
-    <div class="note">A/N: MUHAMMAD DAVIS</div>
-    <button class="copy-btn" onclick="copyToClipboard('dana')">Salin Nomor</button>
-    <a class="dana-btn" href="https://link.dana.id/qr/083173255250" target="_blank">
-      <button>Bayar via DANA</button>
-    </a>
-  </div>
-
-  <div class="card">
-    <h2>QRIS</h2>
-    <img class="qris-img" src="QRIS-1.png" alt="QRIS Code">
-  </div>
-
-  <script>
-    function copyToClipboard(id) {
-      const text = document.getElementById(id).innerText;
-      navigator.clipboard.writeText(text).then(() => {
-        alert("Nomor berhasil disalin: " + text);
-      });
-    }
-  </script>
 </body>
 </html>
+```
+
+**File: home.html**
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MYZUKII STORE - Payment</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="welcome">Selamat datang di MYZUKII STORE</div>
+
+    <div class="card">
+      <h2>GOPAY</h2>
+      <p>083173255250</p>
+      <p class="note">A/N: MUHAMMAD DAVIS</p>
+    </div>
+
+    <div class="card">
+      <h2>DANA</h2>
+      <p>083173255250</p>
+      <p class="note">A/N: MUHAMMAD DAVIS</p>
+      <a href="https://link.dana.id/qr/083173255250" target="_blank">
+        <button>Bayar via DANA</button>
+      </a>
+    </div>
+
+    <div class="card">
+      <h2>QRIS</h2>
+      <p>Silakan scan kode QR di bawah ini:</p>
+      <img src="QRIS-1.png" alt="QRIS" class="qris-img">
+    </div>
+
+    <div class="card">
+      <h3>Order via WhatsApp</h3>
+      <a href="https://wa.me/6283173255250" target="_blank">
+        <button>Chat WhatsApp Sekarang</button>
+      </a>
+    </div>
+
+    <div class="info">
+      Pastikan untuk memverifikasi nomor dan nama penerima sebelum melakukan pembayaran. Jika ada pertanyaan, hubungi MYZUKII STORE langsung. Selamat berbelanja! 🛒✨
+    </div>
+  </div>
+
+  <audio autoplay loop>
+    <source src="dj.mp3" type="audio/mpeg">
+  </audio>
+</body>
+</html>
+```
+
+**File: style.css**
+```css
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('background.jpg') no-repeat center center fixed;
+  background-size: cover;
+  color: #fff;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #00e0ff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: black;
+  font-weight: bold;
+}
+
+button:hover {
+  background-color: #00b0cc;
+}
+
+.qris-img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.note {
+  font-size: 0.9rem;
+  color: #ddd;
+}
+
+.info {
+  font-size: 0.9rem;
+  margin-top: 30px;
+  background-color: rgba(0,0,0,0.5);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+/* Loading Page */
+.loading-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: black;
+  flex-direction: column;
+}
+
+.loading-container {
+  text-align: center;
+}
+
+.logo-loading {
+  max-width: 200px;
+  margin-bottom: 20px;
+}
+
+.welcome {
+  font-size: 1.2rem;
+  color: #ffd700;
+  margin-bottom: 20px;
+}
+```
+
+**File: script.js**
+```javascript
+setTimeout(() => {
+  window.location.href = "home.html";
+}, 3000);
