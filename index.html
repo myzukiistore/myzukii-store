@@ -8,51 +8,71 @@
   <script src="script.js" defer></script>
 </head>
 <body class="loading">
+  <!-- Loading Screen -->
   <div class="loading-screen">
     <img src="logo.jpg" alt="MYZUKII Logo" class="logo-loading" />
     <h1>Loading Payment Gateway...</h1>
     <div class="loading-bar"></div>
   </div>
 
+  <!-- Main Content -->
   <main class="main-content hidden">
-    <header>
-      <h2> Selamat Datang di <span class="highlight">MYZUKII STORE</span> </h2>
+    <!-- Header Menu Bar -->
+    <header class="header-bar">
+      <img src="logo.jpg" alt="MYZUKII STORE" class="header-logo" />
+      <nav class="menu-bar">
+        <ul>
+          <li><a href="#gopay">GOPAY</a></li>
+          <li><a href="#dana">DANA</a></li>
+          <li><a href="#qris">QRIS</a></li>
+          <li><a href="#contact">Kontak</a></li>
+        </ul>
+      </nav>
     </header>
 
-    <section class="card">
-      <h3>GOPAY</h3>
+    <!-- WhatsApp Contact -->
+    <section id="contact" class="card">
+      <h3>Kontak WhatsApp</h3>
+      <a href="https://wa.me/6283173255250" target="_blank">
+        <button>Hubungi MYZUKII STORE</button>
+      </a>
+    </section>
+
+    <!-- GOPAY Section -->
+    <section id="gopay" class="card">
+      <h3><img src="gopay-logo.png" alt="GOPAY" class="pay-logo" /> GOPAY</h3>
       <p class="number">083173255250</p>
       <span class="an">A/N: MUHAMMAD DAVIS</span>
       <button onclick="copyToClipboard('083173255250')">Salin Nomor</button>
     </section>
 
-    <section class="card">
-      <h3>DANA</h3>
+    <!-- DANA Section -->
+    <section id="dana" class="card">
+      <h3><img src="dana-logo.png" alt="DANA" class="pay-logo" /> DANA</h3>
       <p class="number">083173255250</p>
       <span class="an">A/N: MUHAMMAD DAVIS</span>
-      <a href="https://link.dana.id/qr/083173255250" target="_blank"><button>Bayar via DANA</button></a>
+      <a href="https://link.dana.id/qr/083173255250" target="_blank">
+        <button>Bayar via DANA</button>
+      </a>
       <button onclick="copyToClipboard('083173255250')">Salin Nomor</button>
     </section>
 
-    <section class="card">
-      <h3>QRIS</h3>
-      <p>Silakan scan QR di bawah:</p>
+    <!-- QRIS Section -->
+    <section id="qris">
+      <h3 class="qris-title">QRIS PAYMENT</h3>
       <img src="QRIS-1.png" alt="QRIS MYZUKII STORE" class="qris-img" />
     </section>
 
-    <section class="card">
-      <h3>Order via WhatsApp</h3>
-      <a href="https://wa.me/6283173255250" target="_blank"><button>Chat Sekarang</button></a>
-    </section>
-
+    <!-- Keamanan Info -->
     <section class="info">
-      <p>
-        Pastikan untuk memverifikasi nomor dan nama penerima sebelum melakukan pembayaran.<br />
-        Jika ada pertanyaan, hubungi MYZUKII STORE langsung. Selamat berbelanja! 🛒✨
-      </p>
+      <h4>⚠️ PERHATIAN ⚠️</h4>
+      <p>1. Silahkan cek A/N terlebih dahulu sebelum transfer, untuk menghindari salah kirim.</p>
+      <p>2. Salah kirim pembayaran bukan kesalahan admin, harap teliti.</p>
+      <strong>BE A SMART BUYER 💡</strong>
     </section>
   </main>
 
+  <!-- Background Music -->
   <audio autoplay loop>
     <source src="dj.mp3" type="audio/mpeg" />
   </audio>
