@@ -1,4 +1,3 @@
-/* style.css */
 body {
   margin: 0;
   padding: 0;
@@ -9,6 +8,7 @@ body {
   background-size: cover;
 }
 
+/* Loading screen */
 .loading-screen {
   height: 100vh;
   display: flex;
@@ -23,7 +23,6 @@ body {
 
 .logo-loading {
   width: 150px;
-  height: auto;
   margin-bottom: 20px;
   animation: pulse 2s infinite;
 }
@@ -38,9 +37,9 @@ body {
   width: 80%;
   height: 6px;
   background: #222;
-  overflow: hidden;
   border-radius: 4px;
   position: relative;
+  overflow: hidden;
 }
 
 .loading-bar::before {
@@ -70,7 +69,6 @@ body {
   gap: 20px;
 }
 
-/* Header dan menu bar */
 .header-bar {
   display: flex;
   align-items: center;
@@ -89,30 +87,18 @@ body {
   list-style: none;
   display: flex;
   gap: 1.5rem;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
 .menu-bar a {
   color: #00ffff;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s;
 }
 
 .menu-bar a:hover {
   color: #00dddd;
-}
-
-header h2 {
-  text-align: center;
-  color: #ffd700;
-  font-weight: bold;
-  font-size: 1.5rem;
-}
-
-.highlight {
-  color: #fff700;
 }
 
 .card {
@@ -130,7 +116,6 @@ header h2 {
 }
 
 .card h3 {
-  margin-top: 0;
   color: #00eaff;
   display: flex;
   align-items: center;
@@ -161,7 +146,6 @@ button {
   font-weight: bold;
   border-radius: 8px;
   cursor: pointer;
-  transition: background 0.3s;
 }
 
 button:hover {
