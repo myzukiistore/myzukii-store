@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     document.body.classList.remove("loading");
     document.querySelector(".loading-screen").classList.add("hidden");
     document.querySelector(".main-content").classList.remove("hidden");
-  }, 2500); // Delay 2.5 detik
+  }, 2500); // Tunda 2.5 detik
 });
 
 function copyToClipboard(text) {
