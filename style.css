@@ -70,6 +70,40 @@ body {
   gap: 20px;
 }
 
+/* Header dan menu bar */
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: rgba(0, 0, 0, 0.4);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.header-logo {
+  height: 50px;
+  border-radius: 12px;
+}
+
+.menu-bar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+  padding: 0;
+  margin: 0;
+}
+
+.menu-bar a {
+  color: #00ffff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.menu-bar a:hover {
+  color: #00dddd;
+}
+
 header h2 {
   text-align: center;
   color: #ffd700;
@@ -98,6 +132,13 @@ header h2 {
 .card h3 {
   margin-top: 0;
   color: #00eaff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.pay-logo {
+  height: 24px;
 }
 
 .card p.number {
@@ -127,11 +168,19 @@ button:hover {
   background: #00dddd;
 }
 
+.qris-title {
+  text-align: center;
+  font-size: 1.4rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #00ffff;
+}
+
 .qris-img {
   width: 100%;
-  max-width: 300px;
+  max-width: 320px;
   display: block;
-  margin: 10px auto;
+  margin: 0 auto;
   border-radius: 12px;
   border: 1px solid #00ffff88;
 }
@@ -148,4 +197,3 @@ button:hover {
 .hidden {
   display: none;
   }
-       
